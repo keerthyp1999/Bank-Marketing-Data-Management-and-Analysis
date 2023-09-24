@@ -1,12 +1,10 @@
 ## Title
-Bank Marketing Data Management and Analysis - Design and Optimization
+**Bank Marketing Data Management and Analysis - Design and Optimization**
 ![image](https://github.com/keerthyp1999/Bank-Marketing-Data-Management-and-Analysis/assets/143935705/a65b9ba4-422a-4613-9670-41a6f712482e)
 ## Problem Statement
-Banking institutions need to effectively identify potential customers who are likely to subscribe to term deposits to increase their profitability. To do this, they need to analyze various factors such as age, income, credit history, and education of potential customers. This analysis can help banking institutions create customer profiles and identify patterns in customer behavior, which can inform targeted marketing and outreach strategies. The use of Excel files to store customer data can be limited to banking institutions. Excel files may not be able to handle the large volume of customer data that banking institutions collect, and they can become slow and inefficient. Excel files may also have limited security features, which can lead to insecure data storage. Moreover, working with Excel files can be a manual and time-consuming process, which can lead to slower decision-making.
-## PROPOSED SOLUTION
-Banking institutions can overcome the challenges posed by using Excel files by utilizing a database to securely store and manage customer data. Databases offer numerous benefits, such as the capability to efficiently handle a large volume of data, advanced querying and reporting capabilities, and enhanced security features like user authentication and access control. In addition, databases facilitate collaboration by enabling multiple users to work on data simultaneously, thereby streamlining the overall data management process.
-To adopt a database system, the first step is to create a structured schema that can efficiently store customer data.
-Stored customer data should be securely stored in the database and backed up regularly to prevent data loss. Advanced querying and reporting capabilities can then be utilized to analyze the stored data to gain valuable insights into customer behavior and preferences. This can help tailor marketing campaigns and improve customer service by customizing offers and promotions based on individual customer preferences and past interactions with the bank, increasing the chance of converting potential customers into subscribers.
+Banking institutions aim to identify potential term deposit subscribers effectively. This requires analyzing customer factors like age, income, credit history, and education to create profiles and detect behavior patterns. Excel files are commonly used for this, have limitations: handling large data volumes, security, and manual processes, hampering decision-making
+## Proposed Solution
+Banking institutions can solve Excel's limitations by transitioning to a secure database system. This involves designing a structured schema, ensuring secure data storage, implementing regular backups, and using advanced analysis tools for customer insights. By tailoring marketing efforts based on this data, institutions can increase the likelihood of converting potential customers into subscribers.
 ## Target Users
 Marketing team - Uses database to identify potential customers based on demographics and transaction history.
 
@@ -20,13 +18,30 @@ IT professionals or data analysts -Ensure database is running efficiently and se
 ## Dataset 
 The Bank Marketing Data is taken from UCI Machine Learning Repository and below is the link to the data source:
 [https://archive.ics.uci.edu/ml/datasets/bank+marketing]
-This dataset pertains to the direct marketing campaigns of a Portuguese banking institution and can be used to predict whether a potential customer is likely to subscribe to a term deposit or not.Columns which are not necessary for the analysis are removed and the data is split into multiple tables based on the attribute types mentioned in the data source link. 
-## Description
-The database ‘bankmarketing’ is created in postgresql and then tables are created in the database. To design the tables , we have identified Functional Dependencies and  used normalization concepts like BCNF which helped to us to reduce redundancy and segregate tables properly into  different tables namely client_campaign_details, client_lastcontact_details,c.	client_job_details, client_details,client_loan_details,client_socioeconomic_details. 
-Once the tables are created, the data is loaded to the database using python scripts. We used psycopg2 library to connect to bankmarketing database. The csv files are read using pandas library and are loaded to the tables through the connection established to the database using psycopg2 library. Once the data is loaded, it is tested using multiple sql queries which include data insert, update, delete, select and trigger queries. Optimization is done by creating indexes.
-To get better view of the data , we have also visualized them in tableau.
+This dataset contains information related to direct marketing campaigns conducted by a Portuguese banking institution. The primary objective is to predict whether a potential customer is likely to subscribe to a term deposit or not. To streamline the analysis, unnecessary columns have been removed, and the data has been organized into multiple tables based on attribute types mentioned in the data source link.
+## Project Description
+The project involves creating a database called 'bankmarketing' in **PostgreSQL** and designing tables within this database. The table design process involves identifying functional dependencies and applying normalization concepts, particularly BCNF (Boyce-Codd Normal Form), to minimize redundancy and organize data effectively. The result is a set of distinct tables: **client_campaign_details, client_lastcontact_details, client_job_details, client_details, client_loan_details, and client_socioeconomic_details.**
+
+Once the tables are defined, data is loaded into the database using Python scripts. The project utilizes the **psycopg2 library** to establish a connection to the 'bankmarketing' database. CSV files containing the data are read using the pandas library and then loaded into their respective tables via the established database connection using psycopg2.
+
+To ensure data integrity and functionality, thorough testing is conducted using various SQL queries, including data insertion, updating, deletion, selection, and the use of triggers where necessary.
+
+To enhance data visualization and provide better insights, the project also includes data visualization using Tableau, offering a comprehensive view of the dataset.
 ## Application Development
-We have developed a user-friendly dashboard for management to easily view client and campaign information using Flask. Our website displays table information by retrieving data from databases. Our primary objective is to simplify the query process for end-users without requiring manual connections to the remote database.
+We have developed a user-friendly dashboard for management to easily view client and campaign information using **Flask**. Our website displays table information by retrieving data from databases. Our primary objective is to simplify the query process for end-users without requiring manual connections to the remote database.
+## Tools Used
+Postgre sql - For creation of database 
+
+Python( JUpyter Notebook) - For psycopg2 , pandas to connect to database and load data
+
+Flask - For Web development
+## Contributors
+Keerthy Priya Vanam (University at Buffalo)
+
+Sushmitha Yanamandala(University at Buffalo)
+
+Sree Nandhini Kurusali(University at Buffalo)
+
 
 
 
